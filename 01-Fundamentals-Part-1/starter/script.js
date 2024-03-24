@@ -19,6 +19,11 @@ console.log(typeof null); // object = bug!!
 let age = 29; // can change
 age = 30;
 
+if (age === 30) console.log('You just became an old lady :D');
+
+// '30' == 30 true
+// '30' === 30 false
+
 const birthYear = 1994; // cant change
 
 const ageStephanyEloise = 2034 - 1994;
@@ -116,6 +121,37 @@ console.log('I am ' + 23 + ' years old');
 // ('23' + '10' + 3); 23103 !
 // ('23' / '2'); 11.5
 
+// 5 falsy values; 0, '', undefined, null, NaN
 
+const money = 100;
+if (money) {
+    console.log("Don't spend it all ;)");
+} else {
+    console.log('You should get a job!');
+};
 
+let height;
+if (height) {
+    console.log('YAY! Height is defined');
+} else {
+    console.log('Height is UNDEFINED');
+};
 
+// const favourite = prompt("Whats your favourite number?");
+// console.log(favourite); //typeof String
+
+// if (favourite == 27) { // '27' == 27
+//     console.log('Cool! 27 is an amazing number!');
+// };
+
+const favourite = Number(prompt("Whats your favourite number?"));
+
+if (favourite === 27) {
+    console.log('Cool! 27 is an amazing number!');
+} else if (favourite === 7) {
+    console.log('7 is also a cool number')
+} else {
+    console.log('Number is not 27 or 7')
+};
+
+if (favourite !== 27) console.log('Why not 27?');
