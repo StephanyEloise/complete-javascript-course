@@ -64,6 +64,11 @@ const markHeigherBMI = BMIMark > BMIJohn;
 console.log(BMIMark, BMIJohn, markHeigherBMI);
 // 27.309968138370508 24.194608809993426 true
 
+if (BMIMark > BMIJohn) {
+    console.log(`Mark's BMI (${BMIMark}) is higher than John's BMI (${BMIJohn})!`)
+} else {
+    console.log(`John's BMI (${BMIJohn}) is higher than Mark's BMI (${BMIMark})!`)
+};
 
 const job = 'nanny';
 
@@ -79,6 +84,38 @@ console.log(stephanyEloise);
 console.log(`String
 multiple
 lines`) // `` Clean
+
+const sarahAge = 19;
+const isOldEnough = sarahAge >= 18;
+
+if (isOldEnough) {
+    console.log('Sarah can start driving license 🚗');
+} else {
+    const yearsLeft = 18 - sarahAge;
+    console.log(`Sarah is too young. Wait another ${yearsLeft} years :)`)
+};
+
+let century;
+if (birthYear <= 2000) {
+    century = 20;
+} else {
+    century = 21;
+}
+console.log(century);
+
+// Type conversion
+const inputYear = '1991';
+// (Number(inputYear), inputYear); number, string
+// (inputYear + 18); 199118
+console.log(Number(inputYear) + 18); // 2009
+// (String(23), 23); '23', 23
+
+// Type coercion
+console.log('I am ' + 23 + ' years old');
+// ('23' - '10' - 3); 10
+// ('23' + '10' + 3); 23103 !
+// ('23' / '2'); 11.5
+
 
 
 
