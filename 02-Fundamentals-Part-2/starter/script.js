@@ -141,7 +141,7 @@ Koalas scored 65, 54, and 49.
 TEST DATA 2: Dolphins scored 85, 54, and 41. 
 Koalas scored 23, 34, and 27. */
 
-const calcAverage = (a, b, c) => (a + b + c) / 3;
+/* const calcAverage = (a, b, c) => (a + b + c) / 3;
 let scoreDolphins = calcAverage(44, 23, 71);
 let scoreKoalas = calcAverage(65, 54, 49);
 
@@ -162,4 +162,22 @@ checkWinner(576, 111);
 scoreDolphins = calcAverage(85, 54, 41);
 scoreKoalas = calcAverage(23, 34, 27);
 
-checkWinner(scoreDolphins, scoreKoalas);
+checkWinner(scoreDolphins, scoreKoalas); */
+
+const friends = ['Micheal', 'Steven', 'Peter'];
+const years = new Array(1991, 1984, 2008, 2020);
+
+console.log(friends[0]); // Michael, [1] Steven, [2] Peter
+console.log(friends.length);
+console.log(friends[friends.length - 1]); // Peter
+
+friends[2] = 'Jay'; // Peter -> Jay
+console.log(friends);
+
+// Const = [still can change de element inside];
+
+const firstName = 'Jonas'
+const jonas = [firstName, 'Schmedtmann', 2037 - 1991, 'teacher', friends];
+
+console.log(jonas);
+console.log(jonas.length);
