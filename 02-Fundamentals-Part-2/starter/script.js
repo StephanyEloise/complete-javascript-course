@@ -270,3 +270,49 @@ console.log(bills, tips);
 const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
 console.log(totals);
+
+const midna = {
+    firstName: 'Stephany Eloise',
+    lastName: 'A. Costa',
+    age: 2024 - 1994,
+    job: 'dev',
+    friends: ['Ana C.', 'Erikee', 'Dylan']
+};
+
+console.log(midna);
+console.log(midna.lastName);
+console.log(midna['lastName']);
+
+const nameKey = 'Name';
+console.log(midna['first' + nameKey]);
+console.log(midna['last' + nameKey]);
+
+const interestedIn = prompt('What do you want to know about Midna? Choose between firstName, lastName, age, job, and friends.');
+
+if (midna[interestedIn]) {
+    console.log(midna[interestedIn]);
+} else {
+    console.log('Wrong request! Choose between firstName, lastName, age, job, and friends.');
+};
+
+midna.location = 'Brazil';
+midna['instagram'] = '@midna.muse';
+console.log(midna);
+
+// Challenge
+// "Jonas has 3 friends, and his best friend is
+// called Michael"
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2024 - 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven'],
+    location: 'Portugal',
+    twitter: '@jonasschmedtmann'
+};
+
+console.log(`${jonas.firstName} has ${jonas.friends.length}, and his best friend is called ${jonas.friends[0]}.`);
+
+
