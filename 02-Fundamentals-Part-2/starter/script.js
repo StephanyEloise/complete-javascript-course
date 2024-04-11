@@ -198,31 +198,31 @@ checkWinner(scoreDolphins, scoreKoalas); */
 // const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
 // console.log(ages);
 
-const friends = ['Micheal', 'Steven', 'Peter'];
+// const friends = ['Micheal', 'Steven', 'Peter'];
 
 // Add Elements
-friends.push('Jay'); // Last
-friends.unshift('Jhon'); // First
-console.log(friends);
+// friends.push('Jay'); // Last
+// friends.unshift('Jhon'); // First
+// console.log(friends);
 
-// Remove Elements
-friends.pop(); // Last
-friends.shift(); // First
-console.log(friends);
+// // Remove Elements
+// friends.pop(); // Last
+// friends.shift(); // First
+// console.log(friends);
 
-console.log(friends.indexOf('Steven')); // 1 
-console.log(friends.indexOf('Any Name')); // -1
+// console.log(friends.indexOf('Steven')); // 1 
+// console.log(friends.indexOf('Any Name')); // -1
 
-console.log(friends.includes('Steven')); // true 
-console.log(friends.includes('Any Name')); // false
+// console.log(friends.includes('Steven')); // true 
+// console.log(friends.includes('Any Name')); // false
 
-friends.push(23);
-console.log(friends.includes('23')); // false
-console.log(friends.includes(23)); // true
+// friends.push(23);
+// console.log(friends.includes('23')); // false
+// console.log(friends.includes(23)); // true
 
-if (friends.includes('Steven')) {
-    console.log('You have a friend called Steven');
-};
+// if (friends.includes('Steven')) {
+//     console.log('You have a friend called Steven');
+// };
 
 /* CHALLENGE #2
 Steven wants you to improve his tip calculator, 
@@ -303,39 +303,108 @@ TEST DATA: 125, 555, and 44.
 // "Jonas has 3 friends, and his best friend is
 // called Michael"
 
-const jonas = {
-    firstName: 'Jonas',
-    lastName: 'Schmedtmann',
-    birthYeah: 1991,
-    job: 'teacher',
-    friends: ['Michael', 'Peter', 'Steven'],
-    location: 'Portugal',
-    twitter: '@jonasschmedtmann',
-    hasDriversLicense: true,
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Schmedtmann',
+//     birthYeah: 1991,
+//     job: 'teacher',
+//     friends: ['Michael', 'Peter', 'Steven'],
+//     location: 'Portugal',
+//     twitter: '@jonasschmedtmann',
+//     hasDriversLicense: true,
 
-    // calcAge: function (birthYeah) {
-    //     return 2024 - birthYeah;
-    // }
+// calcAge: function (birthYeah) {
+//     return 2024 - birthYeah;
+// }
 
 
-    // calcAge: function (birthYeah) {
-    //     console.log(this);
-    //     return 2024 - this.birthYeah;
-    //     }
-    // };
+// calcAge: function (birthYeah) {
+//     console.log(this);
+//     return 2024 - this.birthYeah;
+//     }
+// };
 
-    calcAge: function () {
-        this.age = 2024 - this.birthYeah;
-        return;
-    },
+//     calcAge: function () {
+//         this.age = 2024 - this.birthYeah;
+//         return;
+//     },
 
-    getSummary: function () {
-        return `${this.firstName} is a ${this.calcAge()} year old ${jonas.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`
-    }
-};
+//     getSummary: function () {
+//         return `${this.firstName} is a ${this.calcAge()} year old ${jonas.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`
+//     }
+// };
 
 // console.log(`${jonas.firstName} has ${jonas.friends.length}, and his best friend is called ${jonas.friends[0]}.`);
 // console.log(jonas.calcAge());
 // console.log(jonas['calcAge'](1991));
 
-console.log(jonas.getSummary());
+// console.log(jonas.getSummary());
+
+/* CHALLENGE #3
+Let's go back to Mark and John 
+comparing their BMIs!
+
+This time, let's use objects to 
+implement the calculations! 
+Remember: BMI = mass / (height * height) 
+(mass in kg and height in meters).
+
+Your tasks:
+
+For each of them, 
+create an object with properties 
+for their full name, mass, and height 
+(Mark Miller and John Smith). 
+Name these objects as mark and john, 
+and their properties exactly as fullName,
+mass and height.
+
+Create a calcBMI method on each object 
+to calculate the BMI 
+(the same method on both objects). 
+Assign the BMI value to a property 
+called bmi (lowercase), 
+and also return it from the method.
+
+Log to the console who has the higher BMI, 
+together with the full name 
+and the respective BMI. 
+Example: "John Smith's BMI (28.3) 
+is higher than Mark Miller's (23.9)!".
+
+TEST DATA: Marks weighs 78 kg 
+and is 1.69 m tall. 
+John weighs 92 kg and is 1.95 m tall. */
+
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+};
+
+const john = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+};
+
+mark.calcBMI();
+john.calcBMI();
+
+console.log(mark.bmi, john.bmi);
+
+if (mark.bmi > john.bmi) {
+    console.log(`${mark.fullName}'s BMI (${mark.bmi}) 
+    is higher than ${john.fullName}'s BMI (${john.bmi}).`)
+} else if (john.bmi > mark.bmi) {
+    console.log(`${john.fullName}'s BMI (${john.bmi}) 
+    is higher than ${mark.fullName}'s BMI (${mark.bmi}).`)
+};
