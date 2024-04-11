@@ -318,12 +318,24 @@ const jonas = {
     // }
 
 
-    calcAge: function (birthYeah) {
-        console.log(this);
-        return 2024 - this.birthYeah;
+    // calcAge: function (birthYeah) {
+    //     console.log(this);
+    //     return 2024 - this.birthYeah;
+    //     }
+    // };
+
+    calcAge: function () {
+        this.age = 2024 - this.birthYeah;
+        return;
+    },
+
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()} year old ${jonas.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`
     }
 };
 
-console.log(`${jonas.firstName} has ${jonas.friends.length}, and his best friend is called ${jonas.friends[0]}.`);
-console.log(jonas.calcAge());
+// console.log(`${jonas.firstName} has ${jonas.friends.length}, and his best friend is called ${jonas.friends[0]}.`);
+// console.log(jonas.calcAge());
 // console.log(jonas['calcAge'](1991));
+
+console.log(jonas.getSummary());
