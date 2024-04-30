@@ -23,7 +23,10 @@
 // - Find min value in temp array 
 // - Substract min from max (amplitude) and return it
 
-const calcTempAmplitude = function (temps) {
+const calcTempAmplitudeNew = function (t1, t2) {
+    const temps = t1.concat(t2);
+    console.log(temps);
+
     let max = temps[0];
     let min = temps[0];
 
@@ -37,8 +40,6 @@ const calcTempAmplitude = function (temps) {
     console.log(max, min);
     return max - min;
 };
-const amplitude = calcTempAmplitude(temperatures);
-
-calcTempAmplitude([3, 7, 4, 1, 8]);
-calcTempAmplitude(temperatures);
+const amplitudeNew = calcTempAmplitudeNew([3, 5, 1], [9, 0, 5]);
+console.log(amplitudeNew);
 
