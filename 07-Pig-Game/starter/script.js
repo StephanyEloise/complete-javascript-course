@@ -27,6 +27,12 @@ btnRoll.addEventListener('click', function(){
 
     // 3. Check for rolled 1:
     // if true, switch to next player 
+    if(dice !==1 ) {
+        // Add dice to current score
 
+        
+    } else {
+        // Switch to next player
+    }
 
 });
