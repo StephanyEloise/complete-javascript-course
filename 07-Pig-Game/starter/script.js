@@ -29,7 +29,7 @@ btnRoll.addEventListener('click', function(){
     // if true, switch to next player 
     if(dice !==1 ) {
         // Add dice to current score
-
+        
         
     } else {
         // Switch to next player
